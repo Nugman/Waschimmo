@@ -1,4 +1,5 @@
 # waschimmo
-Arduino Sketch für eine DIY Plattenwaschmaschine.
+Die DIY Plattenwaschmaschine
 
-Details und Baubericht auf http://www.dual-board.de/index.php?thread/59689-vorstellung-dual-waschimmo-automatic/
+Waschimmo ist lizenziert unter einer Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz.
+http://www.waschimmo.de/
