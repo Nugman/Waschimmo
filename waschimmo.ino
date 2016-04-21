@@ -82,15 +82,11 @@ void setup() {
   pinMode(inputEnter, INPUT_PULLUP);
   pinMode(inputBack, INPUT_PULLUP);
 
-  
-
-  // set up the LCD's number of columns and rows:
-  // lcd.begin(16, 2);
   lcd.begin();
   // Print a message to the LCD.
-  lcd.print("Welcome! Bring");
+  lcd.print("Waschimmo");
   lcd.setCursor(0,1);
-  lcd.print("your dirty music");
+  lcd.print("V 1.00");
   delay(5000);
 
   // set up menu
