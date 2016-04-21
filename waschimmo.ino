@@ -553,7 +553,7 @@ void lowerArm() {
   for(pos = 40; pos>=0; pos-=1)
   {                               
     liftServo.write(pos);
-    delay(20);
+    delay(25);
   }
 }  
 
