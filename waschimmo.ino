@@ -203,26 +203,16 @@ void washMain(MenuItem* p_menu_item) {
     // lower brush
   lowerBrush();
       
-  for (int x=washingTime; x > 0; x--){
-    lcd.setCursor(0,1);
-    lcd.print(x);
-    for (int y=60; y>-1; y--){
-      delay(250);
-      lcd.setCursor(2,1);
-      lcd.print(".");
-      delay(250);
-      lcd.setCursor(3,1);
-      lcd.print(".");
-      delay(250);
-      lcd.setCursor(4,1);
-      lcd.print(".");
-      delay(250);
-      lcd.setCursor(2,1);
-      lcd.print("   ");
+  for (int minutes=washingTime-1; minutes>=0; minutes--){
+    for (int seconds=59; seconds>=0; seconds--){
+      lcd.setCursor(0,1);
+      lcd.print(minutes);
+      lcd.print(":");
+      (seconds < 10) ? lcd.print("0") : NULL;
+      lcd.print(seconds);
+      delay(1000);
     }
   }
-  lcd.setCursor(0,1);
-  lcd.print("0");
   
     // lift brush
   liftBrush();
@@ -296,22 +286,14 @@ void dryPipe(MenuItem* p_menu_item){
   lcd.print("Trockne Schlauch");
     // turn on pump 
   digitalWrite(pumpPin,LOW);  
-  for (int x=2; x > 0; x--){
-    lcd.setCursor(0,1);
-    lcd.print(x);
-    for (int y=60; y>-1; y--){
-      delay(250);
-      lcd.setCursor(2,1);
-      lcd.print(".");
-      delay(250);
-      lcd.setCursor(3,1);
-      lcd.print(".");
-      delay(250);
-      lcd.setCursor(4,1);
-      lcd.print(".");
-      delay(250);
-      lcd.setCursor(2,1);
-      lcd.print("      ");
+  for (int minutes=1; minutes>=0; minutes--){
+    for (int seconds=59; seconds>=0; seconds--){
+      lcd.setCursor(0,1);
+      lcd.print(minutes);
+      lcd.print(":");
+      (seconds < 10) ? lcd.print("0") : NULL;
+      lcd.print(seconds);
+      delay(1000);
     }
   }
   digitalWrite(pumpPin,HIGH);  
