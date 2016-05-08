@@ -86,7 +86,7 @@ void setup() {
   // Print a message to the LCD.
   lcd.print("Waschimmo");
   lcd.setCursor(0,1);
-  lcd.print("V 1.00");
+  lcd.print("V 1.01");
   delay(5000);
 
   // set up menu
