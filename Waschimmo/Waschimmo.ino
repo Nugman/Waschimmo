@@ -86,7 +86,7 @@ void setup() {
   // Print a message to the LCD.
   lcd.print("Waschimmo");
   lcd.setCursor(0,1);
-  lcd.print("V 1.01");
+  lcd.print("V 1.02");
   delay(5000);
 
   // set up menu
@@ -244,8 +244,8 @@ void washMain(MenuItem* p_menu_item) {
       // in steps of 1 degree
     armServo.write(armPos);              // tell servo to go to position in variable 'armPos'
     delay(60000/rpm);                    // suck 1 rotation
-    
   }
+  delay(60000/rpm);                      // stay at run-in for another rotation
 
 
     // raise arm
@@ -518,8 +518,7 @@ void setRecordSize(MenuItem* p_menu_item){
 }
 
 void liftArm() {
-  int pos = 0;
-  for(pos = 0; pos < 40; pos += 1)
+  for(int pos = 0; pos < 40; pos += 1)
   {
     liftServo.write(pos);
     delay(25);
@@ -527,8 +526,7 @@ void liftArm() {
 }
 
 void lowerArm() {
-  int pos = 40;
-  for(pos = 40; pos>=0; pos-=1)
+  for(int pos = 40; pos>=0; pos-=1)
   {                               
     liftServo.write(pos);
     delay(25);
